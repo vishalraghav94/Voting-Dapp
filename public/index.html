@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Voting App</title>
+    <script src="script/angular.min.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<div ng-app="Vote" ng-controller="VotingController">
+    <div class="main-app">
+        <h6 class="heading">Vote Here</h6>
+        <div class="live-feed">
+            <ul class="live-feed-list">
+                <li class="live-feed-list-item" ng-repeat="(key, value) in candidates" ng-click="vote(key)">
+                    <div class="key">{{key}}</div>
+                    <div class="value">{{value}}</div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+</body>
+<script src="script/index.js"></script>
+</html>
